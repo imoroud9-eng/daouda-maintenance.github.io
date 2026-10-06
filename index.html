@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daouda Maintenance Informatique – Nikki, Bénin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F6F8;--ink:#12202C;--mute:#4E5E6B;--line:#CFD8DF;--blue:#1B4FD6;--sun:#FFC83D;--card:#FFFFFF;--on-blue:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1A24;--ink:#EAF0F4;--mute:#9DB0BE;--line:#26394A;--blue:#7FA2FF;--card:#16232F;--on-blue:#0F1A24}}
+:root[data-theme="dark"]{--bg:#0F1A24;--ink:#EAF0F4;--mute:#9DB0BE;--line:#26394A;--blue:#7FA2FF;--card:#16232F;--on-blue:#0F1A24}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font:800 20px "Bricolage Grotesque",sans-serif;text-decoration:none}
+.logo b{background:var(--sun);color:#12202C;padding:0 7px;border-radius:5px;margin-right:6px}
+.btn{display:inline-block;background:var(--blue);color:var(--on-blue);font-weight:600;padding:13px 22px;border-radius:999px;text-decoration:none}
+.btn:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.hero{display:grid;gap:36px;padding:28px 0 64px;grid-template-columns:1.1fr .9fr;align-items:center}
+.hero h1{font-size:clamp(38px,6.4vw,68px);font-weight:800;letter-spacing:-.02em}
+.hero p{max-width:46ch;color:var(--mute);margin:20px 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.ticket{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 14px 30px rgba(18,32,44,.12)}
+.ticket h3{font-size:19px;margin-bottom:4px}
+.ticket small{color:var(--mute)}
+.ticket ul{list-style:none;margin:16px 0;padding:0}
+.ticket button{all:unset;box-sizing:border-box;display:flex;gap:12px;align-items:center;width:100%;padding:11px 0;border-bottom:1px dashed var(--line);cursor:pointer}
+.ticket i{width:22px;height:22px;border-radius:6px;border:2px solid var(--mute);flex:none;display:grid;place-items:center;font-style:normal;font-size:14px;line-height:1}
+.ticket button[aria-pressed="true"] i{background:var(--blue);border-color:var(--blue);color:var(--on-blue)}
+.ticket button[aria-pressed="true"] span{text-decoration:line-through;color:var(--mute)}
+.bar{height:8px;background:var(--line);border-radius:9px;overflow:hidden}
+.bar div{height:100%;width:0;background:var(--sun);transition:width .35s}
+#state{margin:10px 0 0;font-weight:600}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(28px,4.4vw,42px);margin-bottom:28px}
+.svc{list-style:none;padding:0;margin:0}
+.svc li{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:8px 32px;padding:20px 0;border-bottom:1px solid var(--line)}
+.svc h3{font-size:22px}
+.svc p{margin:0;color:var(--mute);max-width:60ch}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;list-style:none;padding:0;margin:0;counter-reset:s}
+.steps li{counter-increment:s;border-top:4px solid var(--blue);padding-top:12px}
+.steps li::before{content:counter(s);font:800 30px "Bricolage Grotesque",sans-serif;color:var(--blue)}
+.steps b{display:block;font-size:18px}
+.steps span{color:var(--mute);font-size:15px}
+.contact{background:var(--blue);color:var(--on-blue);border-radius:18px;padding:40px 28px;margin:56px 0}
+.contact h2{margin-bottom:12px}
+.contact p{margin:0 0 22px;max-width:52ch}
+.contact .btn{background:var(--sun);color:#12202C}
+footer{color:var(--mute);font-size:14px;padding:0 0 32px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.svc li{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.tarifs{display:grid;grid-template-columns:1.3fr .7fr;gap:36px;align-items:center}
+.price{list-style:none;margin:0;padding:0}
+.price li{display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--line)}
+.price b{white-space:nowrap}
+.note{color:var(--mute);font-size:15px;margin:16px 0 0}
+.art{width:100%;max-width:340px;justify-self:center}
+@media(max-width:760px){.tarifs{grid-template-columns:1fr}.art{order:-1;max-width:240px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="logo" href="#"><b>DM</b>Daouda Maintenance</a>
+  <a class="btn" href="#contact">Nous contacter</a>
+</header>
+
+<main>
+<div class="hero">
+  <div>
+    <h1>Votre ordinateur est en panne ? On le remet en marche.</h1>
+    <p>Dépannage, nettoyage, réinstallation et récupération de données, à Nikki et dans les environs. Diagnostic clair avant toute réparation. Disponibles 24h/24.</p>
+    <div class="cta">
+      <a class="btn" href="https://wa.me/2290153209531?text=Bonjour%2C%20j%27ai%20un%20probl%C3%A8me%20avec%20mon%20ordinateur.">Écrire sur WhatsApp, 24h/24</a>
+      <a class="btn alt" href="#tarifs">Voir les tarifs</a>
+    </div>
+  </div>
+  <div class="ticket" aria-label="Exemple de fiche de réparation">
+    <h3>Fiche de réparation</h3>
+    <small>Touchez chaque étape pour la valider</small>
+    <ul id="tasks">
+      <li><button aria-pressed="false"><i></i><span>Diagnostic complet</span></button></li>
+      <li><button aria-pressed="false"><i></i><span>Nettoyage et ventilation</span></button></li>
+      <li><button aria-pressed="false"><i></i><span>Suppression des virus</span></button></li>
+      <li><button aria-pressed="false"><i></i><span>Mise à jour du système</span></button></li>
+    </ul>
+    <div class="bar"><div id="fill"></div></div>
+    <p id="state">En attente de diagnostic</p>
+  </div>
+</div>
+
+<section id="services">
+  <h2>Ce que nous réparons</h2>
+  <ul class="svc">
+    <li><h3>Pannes matérielles</h3><p>Écran, clavier, batterie, chargeur, disque dur, ventilateur : nous identifions la pièce en cause et la remplaçons.</p></li>
+    <li><h3>Ordinateur lent ou bloqué</h3><p>Nettoyage, suppression des virus, réinstallation de Windows et des logiciels pour retrouver un appareil rapide.</p></li>
+    <li><h3>Récupération de données</h3><p>Photos, documents et fichiers perdus après une panne ou une suppression : nous tentons de les récupérer.</p></li>
+    <li><h3>Imprimantes et Wi-Fi</h3><p>Installation et réglage des imprimantes, du réseau Wi-Fi et des connexions de votre maison ou de votre bureau.</p></li>
+    <li><h3>Maintenance régulière</h3><p>Entretien périodique pour les particuliers et les petites structures, afin d'éviter les pannes avant qu'elles arrivent.</p></li>
+  </ul>
+</section>
+
+<section id="tarifs">
+  <h2>Tarifs</h2>
+  <div class="tarifs">
+    <div>
+      <ul class="price">
+        <li><span>Diagnostic de l'appareil</span><b>2 000 FCFA</b></li>
+        <li><span>Nettoyage et entretien</span><b>dès 5 000 FCFA</b></li>
+        <li><span>Suppression de virus</span><b>dès 5 000 FCFA</b></li>
+        <li><span>Réinstallation de Windows et logiciels</span><b>dès 10 000 FCFA</b></li>
+        <li><span>Remplacement écran, clavier ou batterie (main-d'œuvre)</span><b>dès 5 000 FCFA</b></li>
+        <li><span>Récupération de données</span><b>dès 10 000 FCFA</b></li>
+        <li><span>Installation imprimante ou Wi-Fi</span><b>dès 3 000 FCFA</b></li>
+      </ul>
+      <p class="note">Prix indicatifs. Le prix final, avec le coût des pièces, vous est annoncé après le diagnostic et avant toute réparation.</p>
+    </div>
+    <svg class="art" viewBox="0 0 320 260" role="img" aria-label="Ordinateur portable en cours de réparation avec une clé">
+<rect x="50" y="30" width="220" height="145" rx="12" style="fill:var(--card);stroke:var(--ink);stroke-width:5"/>
+<rect x="66" y="46" width="188" height="113" rx="6" style="fill:var(--blue)"/>
+<path d="M130 104l22 22 42-46" fill="none" stroke="#FFC83D" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 190h280l-18 34H38z" style="fill:var(--ink)"/>
+<rect x="125" y="190" width="70" height="8" rx="4" style="fill:var(--bg)"/>
+<g transform="rotate(35 262 70)"><rect x="256" y="-4" width="12" height="96" rx="6" style="fill:#FFC83D;stroke:var(--ink);stroke-width:4"/><circle cx="262" cy="-8" r="18" style="fill:#FFC83D;stroke:var(--ink);stroke-width:4"/><rect x="255" y="-30" width="14" height="22" style="fill:var(--card)"/></g>
+</svg>
+  </div>
+</section>
+
+<section>
+  <h2>Comment ça se passe</h2>
+  <ol class="steps">
+    <li><b>Vous nous contactez</b><span>Décrivez la panne par WhatsApp ou par téléphone.</span></li>
+    <li><b>Diagnostic</b><span>Nous examinons l'appareil et vous annonçons le problème et le prix.</span></li>
+    <li><b>Réparation</b><span>Elle commence seulement après votre accord.</span></li>
+    <li><b>Remise</b><span>Vous récupérez un appareil testé devant vous.</span></li>
+  </ol>
+</section>
+
+<div class="contact" id="contact">
+  <h2>Un appareil à réparer ?</h2>
+  <p>Nous sommes disponibles 24h/24. Écrivez-nous en décrivant la panne et nous répondons avec la marche à suivre et un premier avis.</p>
+  <a class="btn" href="https://wa.me/2290153209531">WhatsApp : +229 01 53 20 95 31</a>
+</div>
+</main>
+
+<footer>© Daouda Maintenance Informatique · Nikki, Bénin</footer>
+</div>
+
+<script>
+var btns=document.querySelectorAll('#tasks button'),fill=document.getElementById('fill'),st=document.getElementById('state');
+var msgs=['En attente de diagnostic','Réparation en cours','Réparation en cours','Presque terminé','Prêt à récupérer !'];
+btns.forEach(function(b){b.addEventListener('click',function(){
+  b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');
+  var n=document.querySelectorAll('#tasks [aria-pressed="true"]').length;
+  fill.style.width=(n/btns.length*100)+'%';st.textContent=msgs[n];
+});});
+</script>
+</body>
+</html>
